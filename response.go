@@ -30,7 +30,7 @@ func (c *Context) Error(err error, items ...gin.H) error {
 			body[k] = v
 		}
 	}
-	c.JSON(http.StatusOK, body)
+	c.JSON(http.StatusInternalServerError, body)
 	return err
 }
 
